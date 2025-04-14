@@ -9,9 +9,9 @@ def add(numbers: str) -> int:
         numbers = parts[1]
 
     numbers = numbers.replace("\n", delimiter)
-    
+
     if numbers:
-        for n in numbers.split(","):
+        for n in numbers.split(delimiter):
             total += int(n)
     return total
 
