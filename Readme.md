@@ -2,7 +2,7 @@ This project implements a simple string calculator in Python, designed to parse 
 
 ## Method Signature
 ```python
-int Add(string numbers)
+int add(string numbers)
 ```
 
 ## Features
@@ -15,7 +15,7 @@ int Add(string numbers)
       - `"1,2"` should return `3`
 
 2. **Handling Multiple Numbers**
-    - The `Add` method can handle an unknown number of numbers.
+    - The `add` method can handle an unknown number of numbers.
 
 3. **Handling New Lines**
     - The method can handle new lines between numbers as valid separators, along with commas.
@@ -29,9 +29,13 @@ int Add(string numbers)
     - This line is optional, and all existing scenarios should still be supported.
 
 5. **Negative Number Exception**
-    - Calling `Add` with a negative number will throw an exception `negatives not allowed` with the negative numbers that were passed.
+    - Calling `add` with a negative number will throw an exception `negatives not allowed` with the negative numbers that were passed.
     - Example: `"1,-2,-3"` will result in exception "negatives not allowed: -2, -3"
 
+6. **Ignoring Large Numbers**
+
+    - Numbers larger than 1000 should be ignored in computations.
+    - Example: `"2,1001"` should return 2
 
 ## How to Use
 
@@ -39,6 +43,7 @@ int Add(string numbers)
     - Ensure Python is installed and set up on your machine. and create the vitual environment first and activate it and then install the pytest
 
     - pip install pytest
+
 
 2. **Running Tests**
     - run the test cases using the **pytest**
