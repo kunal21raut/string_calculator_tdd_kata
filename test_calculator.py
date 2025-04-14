@@ -38,5 +38,7 @@ def test_multiple_negatives_raise_exception():
     with pytest.raises(ValueError, match="negative numbers not allowed: -1, -2"):
         add("1,-1,-2")
 
-
+# ignoring the numbers greater than 1000
+def test_ignore_numbers_greater_than_1000():
+    assert add("2,1001") == 2
 

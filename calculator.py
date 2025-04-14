@@ -23,7 +23,8 @@ def add(numbers: str) -> int:
                 num = int(n)
                 if num < 0:
                     negatives.append(num)
-                valid_numbers.append(num)
+                elif num <= 1000:  # only accept numbers <= 1000
+                    valid_numbers.append(num)
 
         if negatives:
             negative_str = ", ".join(str(n) for n in negatives)
