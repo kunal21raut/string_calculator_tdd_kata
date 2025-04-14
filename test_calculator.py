@@ -22,6 +22,9 @@ def test_multiple_numbers():
 def test_newline_as_delimiter():
     assert add("1\n2,3") == 6
 
+# Support different delimiters like //;\n1;2
+def test_custom_delimiter():
+    assert add("//;\n1;2") == 3
 
 
 
