@@ -6,6 +6,9 @@ def test_empty_string_returns_0():
 def test_single_number():
     assert add("5") == 5
 
+def test_two_numbers():
+    assert add("1,9") == 1
+
 
 
 

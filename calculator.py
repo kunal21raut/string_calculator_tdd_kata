@@ -1,12 +1,7 @@
 
 def add(numbers: str) -> int:
-    if numbers == "":
-        return 0
-    
-    if not numbers:
-        return 0
-
-def add(numbers: str) -> int:
-    if not numbers:
-        return 0
-    return int(numbers)
+    total = 0
+    if numbers:
+        for n in numbers.split(","):
+            total += int(n)
+    return total
