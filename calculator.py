@@ -1,7 +1,7 @@
 
 def add(numbers: str) -> int:
     total = 0
-    
+    negatives =[]
     delimiter = ","
     if numbers.startswith("//"):
         parts = numbers.split("\n", 1)
@@ -12,7 +12,10 @@ def add(numbers: str) -> int:
 
     if numbers:
         for n in numbers.split(delimiter):
-            total += int(n)
+            value = int(n)
+            if value < 0:
+                negatives.append(value)
+            total += value
     return total
 
 
