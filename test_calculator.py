@@ -27,6 +27,9 @@ def test_newline_as_delimiter():
 def test_custom_delimiter():
     assert add("//;\n1;2") == 3
 
+# Support different delimiters like //*\n1*2
+def test_custom_delimiter_star():
+    assert add("//*\n2*5") == 10
 
 #Throw exception for negative numbers
 
@@ -41,4 +44,3 @@ def test_multiple_negatives_raise_exception():
 # ignoring the numbers greater than 1000
 def test_ignore_numbers_greater_than_1000():
     assert add("2,1001") == 2
-
